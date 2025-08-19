@@ -1,0 +1,29 @@
+<!--Write a JavaScript program to rotate the string 'w3resource' in the LEFT direction. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rotate String 'w3resource' Periodically</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <H1>ROTATING STRING EXAMPLE</H1>
+        <p>Rotate the string 'w3resource' periodically.</p>
+        <div id="rotateString" style="font-size: 212px; font-weight: bold;"></div>
+        <script>
+            const str = 'W3RESOURCE';
+            let index = 0;
+
+            function rotateString() {
+                document.getElementById('rotateString').textContent = str.slice(index) + str.slice(0, index);
+                index = (index + 1) % str.length;
+            }
+
+            setInterval(rotateString, 1000); // Rotate every second
+            </script>
+    </body>
+</html>
