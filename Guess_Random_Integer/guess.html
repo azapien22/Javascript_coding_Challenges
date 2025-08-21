@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Random Integer Guess Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Guess the Random Integer</h1>
+        <p>Try to guess the random integer between 1 and 10!</p>
+        <script>
+            // Generate a random integer between 1 and 10
+            const randomNum = Math.floor(Math.random() * 10) + 1;
+            
+            // Prompt user for a guess
+            const userGuess = parseInt(prompt("Guess a number between 1 and 10:"));
+
+            // Compare guess with random number
+            if (userGuess === randomNum) {
+                alert("Congratulations! You guessed the right number: " + randomNum);
+            } else {
+                alert("Sorry, the correct number was: " + randomNum);
+            }
+        </script>
+    </body>
+</html>
